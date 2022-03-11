@@ -31,7 +31,7 @@ namespace Solbrinken
 
                 if (!value.Contains("17 januari 2022KL 17:40"))
                 {
-                    throw new Exception($"Page was been updated! Value: {value}");
+                    throw new Exception($"Page has been updated! Value: {value}");
                 }
             }
 
