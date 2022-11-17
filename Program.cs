@@ -29,7 +29,7 @@ namespace Solbrinken
                             .Replace("    ", "")
                             .Replace("\t", "");
 
-                if (!value.Contains("17 januari 2022KL 17:40"))
+                if (!value.Contains("30 september 2022 KL 15:42"))
                 {
                     throw new Exception($"Page has been updated! Value: {value}");
                 }
