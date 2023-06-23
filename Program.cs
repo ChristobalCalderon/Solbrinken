@@ -21,6 +21,8 @@ namespace Solbrinken
             var doc = new HtmlDocument();
             doc.LoadHtml(result);
 
+            string lastUpdated = Environment.GetEnvironmentVariable("LAST_UPDATED");
+            
             foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//div[@class='" + CLASS + "']"))
             {
                 string value = node.InnerText.Trim()
@@ -29,7 +31,7 @@ namespace Solbrinken
                             .Replace("    ", "")
                             .Replace("\t", "");
 
-                if (!value.Contains("30 september 2022KL 15:42"))
+                if (!value.Contains(lastUpdated))
                 {
                     throw new Exception($"Page has been updated! Value: {value}");
                 }
